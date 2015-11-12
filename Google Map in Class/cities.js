@@ -9,7 +9,6 @@ function City(yearRank,city,state,yearEstimate,lastCensus,change,landArea,landAr
     this.lastPopDensity = lastPopDensity;
     this.latLon = latLon;
 }
-​
 var cities = [];
 cities.push(new City ("1","New York","New York","8,491,079","8,175,133","+3.86%","302.6 sq mi","783.8 km2","27,012 per sq mi","10,430 km−2","40.6643,-73.9385"));
 cities.push(new City ("2","Los Angeles","California","3,928,864","3,792,621","+3.59%","468.7 sq mi","1,213.9 km2","8,092 per sq mi","3,124 km−2","34.0194,-118.4108"));
