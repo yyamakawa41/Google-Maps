@@ -52,6 +52,12 @@ var mapctl = angular.module('myApp', []).controller('mapCtrl', function($scope){
 		google.maps.event.trigger($scope.markers[i-1], "click");
 	}
 
+	$scope.updateMarkers = function(){
+		for(i=0; i< $scope.markers.length; i++){
+			$scope.markers[i].setMap(null);
+		}
+	}
+
 	getDirections = function(lat, lon){
 		var directionsService = new google.maps.DirectionsService();
    		var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -80,6 +86,6 @@ var mapctl = angular.module('myApp', []).controller('mapCtrl', function($scope){
 
 	$scope.cities = cities;
 	for (i = 0; i < cities.length; i++){
-		createMarker(cities[i],i)
+		createMarker(cities[i],i);
 	}
 });
