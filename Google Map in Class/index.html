@@ -18,8 +18,8 @@
 		<form ng-submit="updateMarkers(searchString)">
 			<input id="filter-input" ng-model="searchString" type="text">
 
-			<input value="Update map" type="submit">
-			<div class="city" ng-repeat="city in cities | filter: searchString" >
+			<input value="Update Map" type="submit">
+			<div class="city" ng-repeat="city in (filteredCities = (cities | filter: searchString))" >
 				{{city.yearRank}}: {{city.city}}
 				<a class="btn btn-primary sm" href="" ng-click="triggerClick(city.yearRank)">Show Info</a>		
 			</div>

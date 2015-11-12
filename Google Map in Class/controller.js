@@ -56,6 +56,9 @@ var mapctl = angular.module('myApp', []).controller('mapCtrl', function($scope){
 		for(i=0; i< $scope.markers.length; i++){
 			$scope.markers[i].setMap(null);
 		}
+		for(i=0; i<$scope.filteredCities.length; i++){
+			createMarker($scope.filteredCities[i],i);
+		}
 	}
 
 	getDirections = function(lat, lon){
